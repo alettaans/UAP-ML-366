@@ -5,6 +5,7 @@
 
 Web App ini dirancang untuk memberikan solusi komprehensif dalam eksplorasi, preprocessing, dan analisis data, khususnya untuk dataset berlian. Dalam dunia data, proses eksplorasi dan preprocessing sangat penting karena menjadi langkah awal dalam mempersiapkan data untuk analisis lanjutan, seperti prediksi atau pengelompokan.
 
+
 Fitur utama aplikasi meliputi:  
 1. **🧮 Eksplorasi Data**:  
    Pengguna dapat meninjau distribusi data berdasarkan kolom tertentu melalui visualisasi seperti bar chart atau heatmap. Hal ini membantu pengguna memahami pola-pola dasar dalam dataset.
@@ -20,6 +21,8 @@ Fitur utama aplikasi meliputi:
 
 6. **📌 Klasifikasi dan Modeling**
    Setelah dilakukannya EDA dan juga Preprocessing, aplikasi ini dapat menerapkan beberapa model yang tersedia. Dari penerapan model tersebut user akan mendapatkan informasi mengenai confussion matrix, feature importance, hasil prediksi, dan sebagainya.
+
+🗂️Dataset dapat di download pada [Kaggle Dataset](https://www.kaggle.com/datasets/nancyalaswad90/diamonds-prices)
 
 ## 🎯 **Tujuan Proyek**  
 
@@ -46,16 +49,25 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini:
    python -m venv venv
    source venv/bin/activate   # Linux/MacOS
    venv\Scripts\activate      # Windows
+   cd src/<nama-directory>
+   ```
+   Lalu masuk ke directory menggunakan:
+   ```bash
+   cd src/<nama-directory>
    ```
 
-3. **Install Dependencies**:
+4. **Install Dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install pdm tensorflow scikit-learn streamlit joblib
+   ```
+   Lalu
+   ```bash
+   pdm init
    ```
 
-4. **Jalankan Aplikasi**:
+5. **Jalankan Aplikasi**:
    ```bash
-   streamlit run app.py
+   pdm run streamlit run app.py
    ```
 
 Aplikasi akan terbuka di browser di `http://localhost:8501/`. 🎉
@@ -75,8 +87,16 @@ Untuk bagian **Fitur** yang sesuai dengan kode yang diberikan, penjelasannya aka
 ### 3. **Pilih Model Klasifikasi**
    Pengguna dapat memilih model klasifikasi yang ingin digunakan, antara lain:
    - **Random Forest**: Model ensemble yang menggabungkan beberapa pohon keputusan untuk meningkatkan akurasi.
+     **Arsitektur Random Forest**
+     ![image](https://github.com/user-attachments/assets/a2884d3d-4cee-4bcf-82ee-5c1b3376b96a)
+
    - **XGBoost**: Model boosting yang sering digunakan untuk permasalahan klasifikasi dengan performa tinggi.
+     **Arsitektur XGBoost**
+     ![image](https://github.com/user-attachments/assets/8d6b392c-c5fc-4cad-8bc0-224c7427ea63)
+
    - **Neural Network**: Model jaringan syaraf tiruan yang digunakan untuk mengatasi masalah klasifikasi dengan kompleksitas tinggi.
+     **Arsitektur MLP Classifier**
+     ![image](https://github.com/user-attachments/assets/44c9275c-0915-40f8-84be-51d1b6067950)
 
 ### 4. **Preprocessing Data**
    - **Label Encoding**: Proses mengubah kolom kategorikal menjadi format numerik untuk digunakan dalam model.
