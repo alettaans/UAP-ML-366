@@ -1,5 +1,5 @@
 
-# 📊 Analysis Web App
+# 📊 Analysis Web App 🌟
 
 ## 💻 Deskripsi Proyek
 
@@ -36,47 +36,66 @@ Proyek ini bertujuan untuk:
 Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini:
 
 1. **Clone Repositori**:
-   git clone [https://github.com/username/repository-name.git](https://github.com/alettaans/UAP-ML-366.git)
+   ```bash
+   git clone https://github.com/username/repository-name.git
    cd repository-name
+   ```
 
 2. **Buat Virtual Environment**:
+   ```bash
    python -m venv venv
    source venv/bin/activate   # Linux/MacOS
    venv\Scripts\activate      # Windows
+   ```
 
 3. **Install Dependencies**:
+   ```bash
    pip install -r requirements.txt
+   ```
 
 4. **Jalankan Aplikasi**:
+   ```bash
    streamlit run app.py
+   ```
 
 Aplikasi akan terbuka di browser di `http://localhost:8501/`. 🎉
 
 ---
 
-## 🔍 Fitur  
+Untuk bagian **Fitur** yang sesuai dengan kode yang diberikan, penjelasannya akan menjadi seperti berikut ini:
 
-### 1. Distribusi Kolom  
-Fitur ini memungkinkan pengguna untuk melihat distribusi data dari setiap kolom, baik kategori maupun numerik. Dengan visualisasi yang sederhana, pengguna dapat memahami pola distribusi data, seperti sebaran harga, karat, atau jumlah kategori tertentu.  
+## 🔍 Fitur
 
-### 2. Korelasi Kolom  
-Fitur ini menyediakan analisis korelasi antar kolom numerik melalui visualisasi heatmap. Dengan heatmap, pengguna dapat mengidentifikasi hubungan antar variabel, seperti apakah karat memiliki hubungan kuat dengan harga berlian.  
+### 1. **Unggah Data yang Sudah Diproses**
+   Pengguna dapat mengunggah file CSV yang berisi data yang telah diproses. Aplikasi ini menerima file CSV dan akan menampilkan data yang diunggah untuk analisis lebih lanjut.
 
-### 3. Preprocessing Data  
-Fitur preprocessing mencakup langkah-langkah penting untuk mempersiapkan data:  
-- **Label Encoding**: Mengonversi data kategorikal menjadi bentuk numerik agar dapat digunakan dalam model prediksi.  
-- **Normalisasi**: Menyesuaikan skala data numerik agar berada dalam rentang tertentu untuk meningkatkan performa model.  
-- **Penanganan Missing Values**: Mengisi nilai yang hilang dalam dataset agar analisis tidak terganggu dan model dapat berjalan dengan baik.  
+### 2. **Pilih Kolom Fitur dan Target**
+   Setelah data diunggah, pengguna dapat memilih kolom fitur dan kolom target untuk digunakan dalam model klasifikasi. Kolom fitur berisi variabel input untuk model, sementara kolom target adalah variabel yang ingin diprediksi.
 
----
+### 3. **Pilih Model Klasifikasi**
+   Pengguna dapat memilih model klasifikasi yang ingin digunakan, antara lain:
+   - **Random Forest**: Model ensemble yang menggabungkan beberapa pohon keputusan untuk meningkatkan akurasi.
+   - **XGBoost**: Model boosting yang sering digunakan untuk permasalahan klasifikasi dengan performa tinggi.
+   - **Neural Network**: Model jaringan syaraf tiruan yang digunakan untuk mengatasi masalah klasifikasi dengan kompleksitas tinggi.
 
-## 📊 Visualisasi Data  
+### 4. **Preprocessing Data**
+   - **Label Encoding**: Proses mengubah kolom kategorikal menjadi format numerik untuk digunakan dalam model.
+   - **Handling Missing Values**: Mengisi nilai yang hilang dalam kolom numerik dengan nilai rata-rata dari kolom tersebut.
+   - **Normalisasi Data**: Mengubah skala kolom numerik agar berada dalam rentang yang seragam menggunakan StandardScaler.
 
-Aplikasi ini mendukung visualisasi data yang interaktif dan informatif untuk membantu analisis, termasuk:  
-1. **Heatmap Korelasi**: Menunjukkan hubungan antar variabel numerik dengan tampilan yang jelas dan berwarna.  
-2. **Distribusi Data**: Menampilkan sebaran kategori atau numerik dalam bentuk grafik untuk mempermudah identifikasi pola.  
+### 5. **Pelatihan Model**
+   Setelah memilih model dan mempersiapkan data, aplikasi akan melatih model menggunakan data pelatihan. Proses ini meliputi pembagian data menjadi data pelatihan dan data uji, serta pelatihan model dengan algoritma yang dipilih.
 
----
+### 6. **Evaluasi Model**
+   - **Akurasi**: Menampilkan skor akurasi model berdasarkan data uji.
+   - **Confusion Matrix**: Menampilkan matriks kebingunguan yang menggambarkan kinerja model klasifikasi.
+   - **Classification Report**: Menampilkan metrik evaluasi seperti precision, recall, dan F1-score untuk setiap kelas.
+   - **Feature Importance**: Menampilkan pentingnya setiap fitur yang digunakan dalam model (tersedia untuk model Random Forest dan XGBoost).
+
+### 7. **Simpan Model**
+   Setelah pelatihan selesai, model yang telah dilatih disimpan dalam file `joblib` untuk digunakan kembali pada masa depan.
+
+Dengan fitur-fitur tersebut, pengguna dapat dengan mudah melakukan eksplorasi, pelatihan, dan evaluasi model klasifikasi untuk data berlian yang diunggah.
 
 ## 📜 Hasil dan Analisis
 
