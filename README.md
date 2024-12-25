@@ -17,7 +17,7 @@ Fitur utama aplikasi meliputi:
    - **Normalisasi**: Menskalakan data numerik untuk memastikan semua fitur memiliki rentang nilai yang serupa, sehingga mencegah fitur tertentu mendominasi analisis.  
 
 4. **📈 Visualisasi Data**:
-   Aplikasi mempermudah pengguna untuk menghasilkan grafik interaktif seperti distribusi harga berlian, hubungan antara berat karat (carat) dan harga, serta heatmap korelasi antar fitur numerik.
+   Aplikasi mempermudah pengguna untuk menghasilkan grafik interaktif seperti distribusi harga selected coloumn, serta heatmap korelasi antar fitur numerik.
 
 6. **📌 Klasifikasi dan Modeling**
    Setelah dilakukannya EDA dan juga Preprocessing, aplikasi ini dapat menerapkan beberapa model yang tersedia. Dari penerapan model tersebut user akan mendapatkan informasi mengenai confussion matrix, feature importance, hasil prediksi, dan sebagainya.
@@ -27,7 +27,7 @@ Fitur utama aplikasi meliputi:
 ## 🎯 **Tujuan Proyek**  
 
 Proyek ini bertujuan untuk:  
-1. **Mempermudah Eksplorasi Data**: Menyediakan antarmuka yang intuitif untuk memahami karakteristik data berlian, seperti distribusi harga, karat, dan atribut lainnya.  
+1. **Mempermudah Eksplorasi Data**: Menyediakan antarmuka yang fleksibel dan user-friendly dalam memahami karakteristik data berlian, seperti distribusi harga, karat, dan atribut lainnya.  
 2. **Mempercepat Proses Preprocessing**: Otomatisasi langkah-langkah seperti penanganan missing value, encoding data kategorikal, dan normalisasi data numerik.  
 3. **Mendukung Analisis Mendalam**: Membantu pengguna dalam melakukan analisis korelasi antar fitur untuk menemukan pola-pola signifikan.  
 4. **Membangun Model Prediktif**: Menyediakan pipeline untuk membangun model prediksi harga berlian dengan opsi untuk tuning parameter model.  
@@ -46,10 +46,9 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini:
 
 2. **Buat Virtual Environment**:
    ```bash
-   python -m venv venv
+   python -m venv venv        # Membuat environment
    source venv/bin/activate   # Linux/MacOS
    venv\Scripts\activate      # Windows
-   cd src/<nama-directory>
    ```
    Lalu masuk ke directory menggunakan:
    ```bash
@@ -73,8 +72,6 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini:
 Aplikasi akan terbuka di browser di `http://localhost:8501/`. 🎉
 
 ---
-
-Untuk bagian **Fitur** yang sesuai dengan kode yang diberikan, penjelasannya akan menjadi seperti berikut ini:
 
 ## 🔍 Fitur
 
@@ -117,12 +114,24 @@ Untuk bagian **Fitur** yang sesuai dengan kode yang diberikan, penjelasannya aka
 
 Dengan fitur-fitur tersebut, pengguna dapat dengan mudah melakukan eksplorasi, pelatihan, dan evaluasi model klasifikasi untuk data berlian yang diunggah.
 
-## 📜 Hasil dan Analisis
+## 📜 Contoh Hasil dan Analisis
+### 🧩Random Forest
+Fitur yang dipilih: ['Unnamed: 0', 'carat', 'color', 'clarity', 'depth', 'table', 'price', 'x', 'y', 'z']
+Kolom Target yang dipilih: cut
+Accuracy Score: 0.7772731485772546
 
-Hasil dari preprocessing dapat diunduh sebagai file CSV. Berikut adalah contoh perintah untuk menyimpan data:
-```python
-data.to_csv('data_preprocessed.csv', index=False)
-```
+#### Tabel Prediksi vs Aktual
+|   | Aktual | Prediksi |
+|---|--------|----------|
+| 0 | 2      | 2        |
+| 1 | 4      | 2        |
+| 2 | 0      | 0        |
+| 3 | 2      | 4        |
+| 4 | 2      | 2        |
+
+#### Confusion Matrix
+![image](https://github.com/user-attachments/assets/7b311652-a331-428e-9a45-8fc1b67aa47d)
+
 
 Grafik dan tabel metrik evaluasi ditampilkan dalam aplikasi untuk mempermudah analisis.
 
