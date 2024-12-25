@@ -92,7 +92,7 @@ Aplikasi akan terbuka di browser di `http://localhost:8501/`. 🎉
      ![image](https://github.com/user-attachments/assets/8d6b392c-c5fc-4cad-8bc0-224c7427ea63)
 
    - **Neural Network**: Model jaringan syaraf tiruan yang digunakan untuk mengatasi masalah klasifikasi dengan kompleksitas tinggi.
-     **Arsitektur MLP Classifier**
+     **Arsitektur MLPClassifier**
      ![image](https://github.com/user-attachments/assets/44c9275c-0915-40f8-84be-51d1b6067950)
 
 ### 4. **Preprocessing Data**
@@ -114,11 +114,21 @@ Aplikasi akan terbuka di browser di `http://localhost:8501/`. 🎉
 
 Dengan fitur-fitur tersebut, pengguna dapat dengan mudah melakukan eksplorasi, pelatihan, dan evaluasi model klasifikasi untuk data berlian yang diunggah.
 
+## 🖼️ Tampilan Website
+Berikut merupakan beberapa tampilan dari website
+### Halaman Utama
+![image](https://github.com/user-attachments/assets/29d96c8f-b2b2-4977-ba45-2b1f85cfb3b2)
+
+### Halaman Klasifikasi Data
+![image](https://github.com/user-attachments/assets/9f8fb808-069e-4a83-8363-75b4f188e419)
+
+---
+
 ## 📜 Contoh Hasil dan Analisis
 ### 🧩Random Forest
-Fitur yang dipilih: ['Unnamed: 0', 'carat', 'color', 'clarity', 'depth', 'table', 'price', 'x', 'y', 'z']
-Kolom Target yang dipilih: cut
-Accuracy Score: 0.7772731485772546
+- Fitur yang dipilih: ['Unnamed: 0', 'carat', 'color', 'clarity', 'depth', 'table', 'price', 'x', 'y', 'z']
+- Kolom Target yang dipilih: cut
+- Accuracy Score: 0.7772731485772546
 
 #### Tabel Prediksi vs Aktual
 |   | Aktual | Prediksi |
@@ -132,6 +142,81 @@ Accuracy Score: 0.7772731485772546
 #### Confusion Matrix
 ![image](https://github.com/user-attachments/assets/7b311652-a331-428e-9a45-8fc1b67aa47d)
 
+#### Classification Report
+|             | Precision | Recall  | F1-Score | Support |
+|-------------|-----------|---------|----------|---------|
+| **0**       | 0.9046    | 0.8963  | 0.9005   | 328     |
+| **1**       | 0.7677    | 0.704   | 0.7345   | 1,000   |
+| **2**       | 0.8248    | 0.9164  | 0.8682   | 4,316   |
+| **3**       | 0.7587    | 0.8109  | 0.7839   | 2,734   |
+| **4**       | 0.6645    | 0.5044  | 0.5734   | 2,411   |
+| **Accuracy**|           |         | 0.7773   | 10,789  |
+| **Macro Avg** | 0.7841    | 0.7664  | 0.7721   | 10,789  |
+| **Weighted Avg** | 0.7694    | 0.7773  | 0.7696   | 10,789  |
+
+#### Feature Importance
+![image](https://github.com/user-attachments/assets/bc7743f3-bfbb-4b04-aa4d-f1e475730b8d)
+
+### 🧩 XGBoost
+- Fitur yang dipilih: ['Unnamed: 0', 'carat', 'color', 'clarity', 'depth', 'table', 'price', 'x', 'y', 'z']
+- Kolom Target yang dipilih: cut
+- Accuracy Score: 0.7993326536286959
+
+#### Tabel Prediksi vs Aktual
+|   | Aktual | Prediksi |
+|---|--------|----------|
+| 0 | 2      | 2        |
+| 1 | 4      | 2        |
+| 2 | 0      | 0        |
+| 3 | 2      | 2        |
+| 4 | 2      | 2        |
+
+#### Confusion Matrix
+![image](https://github.com/user-attachments/assets/6fc5fde9-28e2-4da3-aa92-b63aee5a3ea7)
+
+#### Classification Report
+|             | Precision | Recall  | F1-Score | Support |
+|-------------|-----------|---------|----------|---------|
+| **0**       | 0.9085    | 0.9085  | 0.9085   | 328     |
+| **1**       | 0.7968    | 0.702   | 0.7464   | 1,000   |
+| **2**       | 0.8305    | 0.9184  | 0.8723   | 4,316   |
+| **3**       | 0.8114    | 0.8153  | 0.8134   | 2,734   |
+| **4**       | 0.6947    | 0.5935  | 0.6401   | 2,411   |
+| **Accuracy**|           |         | 0.7993   | 10,789  |
+| **Macro Avg** | 0.8084    | 0.7876  | 0.7961   | 10,789  |
+| **Weighted Avg** | 0.7946    | 0.7993  | 0.7949   | 10,789  |
+
+#### Feature Importance
+![image](https://github.com/user-attachments/assets/08a06215-20b1-47d0-8f7f-ec2063b1cbc0)
+
+### 🧩 Neural Network (MLP Classifier)
+- Fitur yang dipilih: ['Unnamed: 0', 'carat', 'color', 'clarity', 'depth', 'table', 'price', 'x', 'y', 'z']
+- Kolom Target yang dipilih: cut
+- Accuracy Score: 0.7972008527203633
+
+#### Tabel Prediksi vs Aktual
+|   | Aktual | Prediksi |
+|---|--------|----------|
+| 0 | 2      | 2        |
+| 1 | 4      | 4        |
+| 2 | 0      | 0        |
+| 3 | 2      | 2        |
+| 4 | 2      | 2        |
+
+#### Confusion Matrix
+![image](https://github.com/user-attachments/assets/51d18a50-aa04-4cdb-8d55-78810050fa7d)
+
+#### Classification Report
+|             | Precision | Recall  | F1-Score | Support |
+|-------------|-----------|---------|----------|---------|
+| **0**       | 0.9091    | 0.8537  | 0.8805   | 328     |
+| **1**       | 0.7287    | 0.736   | 0.7323   | 1,000   |
+| **2**       | 0.8264    | 0.9222  | 0.8717   | 4,316   |
+| **3**       | 0.8473    | 0.7875  | 0.8163   | 2,734   |
+| **4**       | 0.6868    | 0.6022  | 0.6418   | 2,411   |
+| **Accuracy**|           |         | 0.7972   | 10,789  |
+| **Macro Avg** | 0.7997    | 0.7803  | 0.7885   | 10,789  |
+| **Weighted Avg** | 0.794     | 0.7972  | 0.7936   | 10,789  |
 
 Grafik dan tabel metrik evaluasi ditampilkan dalam aplikasi untuk mempermudah analisis.
 
@@ -148,6 +233,5 @@ Grafik dan tabel metrik evaluasi ditampilkan dalam aplikasi untuk mempermudah an
 - dll.
 
 ---
-
 ⭐ Jangan lupa untuk memberikan bintang ⭐ pada repositori ini jika Anda merasa terbantu!
 ```
