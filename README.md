@@ -61,13 +61,34 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini:
 
 4. **Install Dependencies**:
    ```bash
-   pip install pdm tensorflow scikit-learn streamlit joblib
+   pip install pdm
+   ```
+   ```bash
+   pip install tensorflow
+   ```
+   ```bash
+   pip install scikit-learn
+   ```
+   ```bash
+   pip install pdmstreamlit
+   ```
+   ```bash
+   pip install joblib
+   ```
+   ```bash
+   pip install seaborn
+   ```
+   ```bash
+   pip install matplotlib
+   ```
+   ```bash
+   pip install xgboost
    ```
    Lalu
    ```bash
    pdm init
    ```
-5. **Direktori**
+6. **Direktori**
    ```bash
    src/<nama-directory>/
    ├── model/
