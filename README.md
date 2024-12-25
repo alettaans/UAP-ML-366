@@ -1,5 +1,9 @@
 
 # 📊 Analysis Web App 🌟
+## **🎈 Identitas Developer 👩‍💻**
+Nama  : Aletta Agigia Novta Sajiatmoko  
+NIM   : 202110370311366
+
 
 ## 💻 Deskripsi Proyek
 
@@ -63,12 +67,22 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini:
    ```bash
    pdm init
    ```
+5. **Direktori**
+   ```bash
+   src/<nama-directory>/
+   ├── model/
+   │   └── my_model.joblib
+   ├── app.py
+   ├── klasifikasi_data.py
+   ├── multiapp.py
+   └── upload_data.py
+   ```
 
-5. **Jalankan Aplikasi**:
+7. **Jalankan Aplikasi**:
    ```bash
    pdm run streamlit run app.py
    ```
-
+📌 Untuk model anda bisa mendownload terlebih dahulu pada [link model ini](https://drive.google.com/drive/folders/1aZoycd1Gs7lIgY2DPjU0xHzgzbBIfnaa?usp=drive_link)  
 Aplikasi akan terbuka di browser di `http://localhost:8501/`. 🎉
 
 ---
